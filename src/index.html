@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../components/svg/3.svg" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="../components/css/all.css" />
+    <title>Three</title>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center"
+  >
+    <main class="w-2/5 h-5/6 bg-white rounded-md flex flex-col">
+      <header class="w-full h-1/3 rounded-t-md">
+        <div
+          class="w-full h-full bg-gradient-to-t from-yellow-300/20 to-white/40 rounded-t-md"
+        ></div>
+      </header>
+
+      <section class="w-full px-16 py-10">
+        <h1 class="text-2xl roboto-regular text-slate-700">
+          Registration Info
+        </h1>
+
+        <div class="mt-10">
+          <input
+            type="text"
+            class="outline-none border-b text-gray-800 placeholder:text-gray-800 w-full pl-2"
+            placeholder="Name"
+          />
+        </div>
+        <div class="grid grid-cols-2 mt-10 gap-x-10 items-center">
+          <div class="flex justify-between border-b">
+            <input
+              type="text"
+              class="outline-none w-full text-gray-800 placeholder:text-gray-800 px-2"
+              placeholder="Birthdate"
+            />
+            <div class="w-4">
+              <img src="../components/svg/calender.svg" class="w-full h-full" />
+            </div>
+          </div>
+
+          <section class="cursor-pointer">
+            <div
+              class="border-b flex justify-between px-2 items-baseline"
+              onclick="listOneClicked()"
+            >
+              <p id="Gendertitle" class="text-gray-800">Gender</p>
+              <i class="fa-regular fa-chevron-down text-xs text-gray-400"></i>
+            </div>
+
+            <ul
+              class="list1 bg-white text-gray-800 mt-3 border rounded-md hidden absolute"
+              id="list"
+            >
+              <li class="hover:bg-gray-100" onclick="itemClicked(this)">
+                <p class="block">Male</p>
+              </li>
+              <li class="mt-1 hover:bg-gray-100" onclick="itemClicked(this)">
+                <p class="block">Female</p>
+              </li>
+              <li class="mt-1 hover:bg-gray-100" onclick="itemClicked(this)">
+                <p class="block">Other</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="cursor-pointer mt-10">
+          <div
+            class="border-b h-6 flex justify-between px-2 text-gray-400 items-baseline"
+            onclick="listTwoClicked()"
+          >
+            <p id="ClassTitle" class="text-gray-800">class</p>
+            <i class="fa-regular fa-chevron-down text-xs text-gray-400"></i>
+          </div>
+
+          <ul
+            class="list2 bg-white text-gray-800 mt-2 border rounded-md hidden absolute"
+            id="list2"
+          >
+            <li class="hover:bg-gray-100" onclick="itemClicked2(this)">
+              <p class="block">Math</p>
+            </li>
+            <li class="mt-1 hover:bg-gray-100" onclick="itemClicked2(this)">
+              <p class="block">language</p>
+            </li>
+            <li class="mt-1 hover:bg-gray-100" onclick="itemClicked2(this)">
+              <p class="block">Physics</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-10">
+          <input
+            type="text"
+            class="outline-none border-b text-gray-800 placeholder:text-gray-800 w-1/3 pl-2"
+            placeholder="Registration Code"
+          />
+        </div>
+
+        <button class="px-10 py-2 bg-blue-600 text-white rounded mt-10">
+          Submit
+        </button>
+      </section>
+    </main>
+  </body>
+  <script src="./main.js"></script>
+</html>
